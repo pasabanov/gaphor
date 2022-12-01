@@ -233,11 +233,11 @@ jobs:
   windows-build-gtk:
     needs: skip-check
     runs-on: windows-latest
-    timeout-minutes: 60
+    timeout-minutes: 90
     env:
       gvsbuild_version: 2022.5.0
       # Bump this number if you want to force a rebuild of gvsbuild with the same revision
-      gvsbuild_update: 2
+      gvsbuild_update: 3
     outputs:
       cachekey: ${{ steps.output.outputs.cachekey }}
     steps:
