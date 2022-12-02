@@ -5,7 +5,7 @@ on:
   release:
     types: [published, prereleased]
 env:
-  python_version: '3.11'
+  python_version: '3.10'
   mainline_build: ${{ github.ref == 'refs/heads/main' || github.event.label.name == 'translation' || github.event_name == 'release' }}
 
 jobs:
@@ -237,7 +237,7 @@ jobs:
     env:
       gvsbuild_version: 2022.5.0
       # Bump this number if you want to force a rebuild of gvsbuild with the same revision
-      gvsbuild_update: 3
+      gvsbuild_update: dbg1
     outputs:
       cachekey: ${{ steps.output.outputs.cachekey }}
     steps:
