@@ -129,7 +129,7 @@ exe = EXE(
     upx=True,
     icon="windows/gaphor.ico",
     version="windows/file_version_info.txt",
-    console=False,
+    console=True,
     codesign_identity=os.getenv("CODESIGN_IDENTITY"),
     entitlements_file="macos/entitlements.plist",
 )
