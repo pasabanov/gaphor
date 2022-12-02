@@ -9,19 +9,19 @@ env:
   mainline_build: ${{ github.ref == 'refs/heads/main' || github.event.label.name == 'translation' || github.event_name == 'release' }}
 
 jobs:
-  skip-check:
-    runs-on: ubuntu-latest
-    outputs:
-      should_skip: ${{ steps.skip_check.outputs.should_skip }}
-    steps:
-      - id: skip_check
-        uses: fkirc/skip-duplicate-actions@v5.2.0
-        with:
-          concurrent_skipping: 'same_content'
-          do_not_skip: '["release", "workflow_dispatch", "schedule"]'
+  # skip-check:
+  #   runs-on: ubuntu-latest
+  #   outputs:
+  #     should_skip: ${{ steps.skip_check.outputs.should_skip }}
+  #   steps:
+  #     - id: skip_check
+  #       uses: fkirc/skip-duplicate-actions@v5.2.0
+  #       with:
+  #         concurrent_skipping: 'same_content'
+  #         do_not_skip: '["release", "workflow_dispatch", "schedule"]'
 
   lint:
-    needs: skip-check
+    # needs: skip-check
     runs-on: ubuntu-latest
     timeout-minutes: 10
     if: "!contains(github.event.head_commit.message, 'skip ci')"
@@ -231,7 +231,7 @@ jobs:
         uses: ./.github/actions/setup_and_test
 
   windows-build-gtk:
-    needs: skip-check
+    # needs: skip-check
     runs-on: windows-latest
     timeout-minutes: 90
     env:
