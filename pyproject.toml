@@ -96,7 +96,7 @@ gaphorconvert = "gaphor.plugins.diagramexport.gaphorconvert:main"
 "styling" = "gaphor.ui.styling:Styling"
 "greeter" = "gaphor.ui.greeter:Greeter"
 "self_test" = "gaphor.ui.selftest:SelfTest"
-"error_reports" = "gaphor.plugins.errorreports:ErrorReports"
+# "error_reports" = "gaphor.plugins.errorreports:ErrorReports"
 
 [tool.poetry.plugins."gaphor.modules"]
 "general_ui_components" = "gaphor.diagram.general.uicomponents:init"
