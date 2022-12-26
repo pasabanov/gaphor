@@ -32,6 +32,7 @@ Gaphor has excellent integration with [Sphinx](sphinx) and [Jupyter notebooks](s
 
    getting_started
    first_model
+   coffee_machine
 
 .. toctree::
    :caption: Features
