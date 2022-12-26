@@ -16,6 +16,7 @@ from gaphor.diagram.propertypages import (
     on_bool_cell_edited,
     on_text_cell_edited,
 )
+from gaphor.SysML.blocks import BlockItem
 from gaphor.UML.classes.datatype import DataTypeItem
 from gaphor.UML.classes.interface import Folded, InterfaceItem
 from gaphor.UML.classes.klass import ClassItem
@@ -298,6 +299,7 @@ class InterfacePropertyPage(PropertyPageBase):
 @PropertyPages.register(DataTypeItem)
 @PropertyPages.register(ClassItem)
 @PropertyPages.register(InterfaceItem)
+@PropertyPages.register(BlockItem)
 class AttributesPage(PropertyPageBase):
     """An editor for attributes associated with classes and interfaces."""
 
@@ -383,6 +385,7 @@ class AttributesPage(PropertyPageBase):
 @PropertyPages.register(DataTypeItem)
 @PropertyPages.register(ClassItem)
 @PropertyPages.register(InterfaceItem)
+@PropertyPages.register(BlockItem)
 class OperationsPage(PropertyPageBase):
     """An editor for operations associated with classes and interfaces."""
 
