@@ -61,7 +61,7 @@ def load_default_model(element_factory):
         model.name = gettext("New model")
         diagram = element_factory.create(Diagram)
         diagram.element = model
-        diagram.name = gettext("main")
+        diagram.name = gettext("New diagram")
     element_factory.model_ready()
 
 
@@ -363,6 +363,9 @@ def save_changes_before_closing_dialog(window: Gtk.Window, handler) -> None:
         dialog.set_close_response("cancel")
 
     def response(dialog, answer):
+        # Unset transient window: it can cause crashes on flatpak
+        # when all windows are destroyed at once.
+        dialog.set_transient_for(None)
         dialog.destroy()
         handler(answer)
 

@@ -18,12 +18,12 @@ as well as create complete, highly complex models.
 Gaphor is 100% Open source. The code and issue tracker can be found on
 `GitHub <https://github.com/gaphor/gaphor>`_.
 
-What are you waiting for? :doc:`Get's get started <getting_started>`!
+What are you waiting for? :doc:`Let's get started <getting_started>`!
 
 For download instructions, and the blog,
 please visit the `Gaphor Website <https://gaphor.org>`_.
 
-Gaphor has excellent integration with [Sphinx](sphinx) and [Jupyter notebooks](scripting).
+Gaphor has excellent integration with :doc:`Sphinx <sphinx>` and :doc:`Jupyter notebooks <scripting>`.
 
 
 .. toctree::
